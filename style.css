@@ -1,25 +1,5 @@
 .hero {
   background-image: url("GUIMBAULT_Noham.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 400px;
-
-  display: flex;
-  flex-direction: column;
-justify-content: flex-start;
-align-items: flex-start;
-text-align: left;
-padding: 20px 30px;
-
-  color: white;
-  text-align: center;
-}
-body {
-  margin: 0;
-}
-
-.hero {
-  background-image: url("GUIMBAULT_Noham.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   aspect-ratio: 16 / 9;
