@@ -82,3 +82,67 @@ body {
   width: 42%;
   height: 45%;
 }
+
+/* ---------- Section 2 : présentation + carrousel ---------- */
+.presentation {
+  padding: 5% 0 4%;
+  text-align: center;
+}
+
+.citation {
+  margin: 0 auto 4%;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.7vw;
+  line-height: 1.3;
+  color: #21152e;
+}
+
+.texte-presentation {
+  max-width: 85%;
+  margin: 0 auto 5%;
+  font-size: 1.9vw;
+  line-height: 1.3;
+}
+
+.texte-presentation p {
+  margin: 0 0 2em;
+}
+
+/* Carrousel : défile horizontalement, avec accroche sur chaque image */
+.carrousel {
+  display: flex;
+  gap: 1.5%;
+  padding: 0 2.5%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carrousel img {
+  flex: 0 0 64%;
+  height: auto;
+  background: white;
+  border: 1px solid #21152e;
+  border-radius: 20px;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+/* Petits points sous le carrousel */
+.points {
+  display: flex;
+  justify-content: center;
+  gap: 1.2vw;
+  margin-top: 2.5%;
+}
+
+.point {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  background: #d8d2cb;
+  border: 1px solid #999;
+}
+
+.point.actif {
+  background: #aaa;
+}
