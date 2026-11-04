@@ -118,6 +118,7 @@ img {
   border-radius: 20px;
   scroll-snap-align: start;
   object-fit: cover;
+  justify-content: center;
 }
 
 .points {
