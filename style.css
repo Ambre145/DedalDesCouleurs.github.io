@@ -111,7 +111,7 @@ img {
 }
 
 .carrousel img {
-  flex: 0 0 64%;
+  flex: 0 0 45%;
   height: auto;
   background: white;
   border: 1px solid #21152e;
