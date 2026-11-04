@@ -59,5 +59,152 @@
     </div>
   </section>
 
+  <!-- SECTION 3 : NOS ARTISTES -->
+  <section class="artistes" id="artistes">
+    <div class="artistes-texte">
+      <h2>Nos Artistes</h2>
+      <p>Noham Guimbault, l'art de faire vivre les images</p>
+      <p>
+        Formé à l'animation, Noham Guimbault imagine, crée et anime ses
+        propres idées. Ses personnages, aux couleurs vives et aux traits
+        expressifs, donnent vie à des sujets qui l'inspirent et le touchent.
+      </p>
+      <p>
+        Nourri par le cinéma d'animation, il raconte des histoires simples
+        qui touchent par leur sincérité.
+      </p>
+      <p>
+        À travers l'animation, Noham cherche à transmettre des messages.
+        Vous pourrez le découvrir notamment avec son projet collaboratif
+        Red Pill.
+      </p>
+      <p>
+        La galerie présente aujourd'hui une sélection de ses images clés,
+        de ses planches de recherche et de ses projets en cours.
+      </p>
+      <a href="#" class="bouton-infos">+ d'infos</a>
+    </div>
+
+    <div class="artistes-images">
+      <img class="art-1" src="redpill.png" alt="Projet Red Pill">
+      <img class="art-2" src="etudes-visages.png" alt="Études de visages">
+      <img class="art-3" src="captures-redpill.png" alt="Captures d'animation">
+    </div>
+  </section>
+
+  <!-- SECTION 4 : INTENTIONS -->
+  <section class="intentions">
+    <h2>Les intentions de Dedal des couleurs</h2>
+    <div class="intentions-liste">
+      <div class="intention">
+        <img src="icone-musee.png" alt="">
+        <p>Collectionner des oeuvres d'art</p>
+      </div>
+      <div class="intention">
+        <img src="icone-chevalet.png" alt="">
+        <p>Exposer de jeunes artistes</p>
+      </div>
+      <div class="intention">
+        <img src="icone-colonne.png" alt="">
+        <p>Proposer un accès à l'Art pour tous</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 : ATELIERS -->
+  <section class="ateliers">
+    <h2>Nos ateliers / événements</h2>
+    <div class="ateliers-liste">
+
+      <article class="carte">
+        <img src="atelier-dessins.png" alt="Atelier dessins">
+        <div class="carte-texte">
+          <div class="carte-ligne">
+            <h3>Atelier dessins</h3>
+            <span>10h-12h</span>
+          </div>
+          <p>Venez apprendre les bases de l'animation !</p>
+          <strong>20 membres</strong>
+        </div>
+      </article>
+
+      <article class="carte">
+        <img src="atelier-video.png" alt="Visionnage vidéos">
+        <div class="carte-texte">
+          <div class="carte-ligne">
+            <h3>Visionnage vidéos</h3>
+            <span>14h-16h</span>
+          </div>
+          <p>Venez regarder nos animations !</p>
+          <strong>40 membres</strong>
+        </div>
+      </article>
+
+      <article class="carte">
+        <img src="atelier-storyboard.png" alt="Atelier storytelling">
+        <div class="carte-texte">
+          <div class="carte-ligne">
+            <h3>Atelier storytelling</h3>
+            <span>9h-12h</span>
+          </div>
+          <p>Venez créer votre histoire !</p>
+          <strong>20 membres</strong>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="points">
+      <span class="point actif"></span>
+      <span class="point"></span>
+      <span class="point"></span>
+      <span class="point"></span>
+    </div>
+  </section>
+
+  <!-- SECTION 6 : CONTACT + NEWSLETTER -->
+  <section class="contact">
+    <form class="newsletter" id="newsletter">
+      <label for="email" class="cache">Adresse e-mail</label>
+      <strong>Abonnez-vous à notre newsletter</strong>
+      <div class="newsletter-champs">
+        <input id="email" type="email" placeholder="Votre adresse e-mail" required>
+        <button type="submit">S'abonner</button>
+      </div>
+      <p id="message-newsletter" class="message"></p>
+    </form>
+
+    <div class="contact-grille">
+      <h2>Prenez rendez-vous avec l'Art</h2>
+      <address>
+        <p>📞 01.45.62.34.56</p>
+        <p>✉️ dedal_des_couleurs@gmail.com</p>
+        <p>📍 10 rue de la république 75000 Paris</p>
+      </address>
+
+      <h2>Rejoignez nous et suivez l'Art</h2>
+      <div class="reseaux">
+        <img src="reseaux-sociaux.png" alt="Instagram, Facebook, YouTube">
+        <span>dedal_des_couleurs</span>
+      </div>
+    </div>
+
+    <nav class="liens-legaux">
+      <a href="#">Termes</a>
+      <a href="#">Politique de Confidentialité</a>
+      <a href="#">Cookies</a>
+    </nav>
+  </section>
+
+  <script>
+    // Message de confirmation à l'envoi de la newsletter
+    document.getElementById('newsletter').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('message-newsletter').textContent =
+        'Merci ! Votre inscription a bien été prise en compte.';
+      this.reset();
+    });
+  </script>
+
 </body>
 </html>
