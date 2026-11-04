@@ -14,3 +14,27 @@ padding: 20px 30px;
   color: white;
   text-align: center;
 }
+body {
+  margin: 0;
+}
+
+.hero {
+  background-image: url("GUIMBAULT_Noham.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  aspect-ratio: 16 / 9;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 20px 30px;
+  box-sizing: border-box;
+  color: white;
+  text-align: left;
+}
+
+.hero h1 {
+  margin: 0;
+}
