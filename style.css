@@ -1,9 +1,27 @@
 /* ---------- Réglages généraux ---------- */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: #f5f1ea;
   color: #21152e;
   font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+.cache {
+  position: absolute;
+  left: -9999px;
 }
 
 /* ---------- Section 1 : bannière ---------- */
@@ -24,7 +42,6 @@ body {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 3.7vw;
-  color: #21152e;
 }
 
 .hero-soustitre {
@@ -33,10 +50,7 @@ body {
   left: 3.5%;
   width: 35%;
   margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
   font-size: 3vw;
-  color: #21152e;
 }
 
 .bouton-orange {
@@ -53,7 +67,6 @@ body {
   text-decoration: none;
 }
 
-/* Images à droite, qui se chevauchent */
 .hero-img {
   position: absolute;
   object-fit: cover;
@@ -61,27 +74,9 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
-.img-lineup {
-  top: 6%;
-  left: 65%;
-  width: 32.5%;
-  height: 44%;
-  background: white;
-}
-
-.img-decor {
-  top: 29%;
-  left: 47%;
-  width: 31.5%;
-  height: 28%;
-}
-
-.img-scene {
-  top: 45%;
-  left: 53.5%;
-  width: 42%;
-  height: 45%;
-}
+.img-lineup { top: 6%;  left: 65%;   width: 32.5%; height: 44%; background: white; }
+.img-decor  { top: 29%; left: 47%;   width: 31.5%; height: 28%; }
+.img-scene  { top: 45%; left: 53.5%; width: 42%;   height: 45%; }
 
 /* ---------- Section 2 : présentation + carrousel ---------- */
 .presentation {
@@ -94,7 +89,6 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 3.7vw;
   line-height: 1.3;
-  color: #21152e;
 }
 
 .texte-presentation {
@@ -108,7 +102,6 @@ body {
   margin: 0 0 2em;
 }
 
-/* Carrousel : défile horizontalement, avec accroche sur chaque image */
 .carrousel {
   display: flex;
   gap: 1.5%;
@@ -127,7 +120,6 @@ body {
   object-fit: cover;
 }
 
-/* Petits points sous le carrousel */
 .points {
   display: flex;
   justify-content: center;
@@ -145,4 +137,293 @@ body {
 
 .point.actif {
   background: #aaa;
+}
+
+/* ---------- Section 3 : Nos Artistes ---------- */
+.artistes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4%;
+  align-items: center;
+  padding: 6% 5%;
+  background-color: #d8d2cb;
+}
+
+.artistes-texte h2 {
+  margin: 0 0 1.5em;
+  font-size: 2.5vw;
+}
+
+.artistes-texte p {
+  margin: 0 0 1.5em;
+  font-size: 1.5vw;
+  line-height: 1.35;
+}
+
+.bouton-infos {
+  display: inline-block;
+  padding: 0.3vw 3vw;
+  background-color: #ffe8a3;
+  border: 1px solid #ff8d28;
+  border-radius: 45px;
+  color: #ff8d28;
+  font-size: 1.4vw;
+  text-decoration: none;
+}
+
+.artistes-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.artistes-images img {
+  border-radius: 25px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  background: white;
+}
+
+.art-1 { width: 70%; align-self: flex-start; }
+.art-2 { width: 55%; align-self: flex-end; }
+.art-3 { width: 75%; align-self: flex-start; margin-left: 5%; }
+
+/* ---------- Section 4 : intentions ---------- */
+.intentions {
+  padding: 6% 5% 3%;
+  text-align: center;
+}
+
+.intentions h2 {
+  margin: 0 0 5%;
+  font-size: 2.5vw;
+}
+
+.intentions-liste {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.intention {
+  width: 28%;
+}
+
+.intention img {
+  height: 12vw;
+  width: auto;
+  object-fit: contain;
+}
+
+.intention p {
+  margin: 1em 0 0;
+  font-size: 1.9vw;
+  line-height: 1.6;
+}
+
+/* ---------- Section 5 : ateliers ---------- */
+.ateliers {
+  padding: 3% 4% 6%;
+}
+
+.ateliers h2 {
+  margin: 0 0 3%;
+  font-size: 2.8vw;
+}
+
+.ateliers-liste {
+  display: flex;
+  gap: 2.5%;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.carte {
+  flex: 0 0 30%;
+  background-color: #f9cb95;
+  border-radius: 35px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.carte img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: white;
+}
+
+.carte-texte {
+  padding: 4%;
+}
+
+.carte-ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.carte-ligne h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.8vw;
+}
+
+.carte-ligne span {
+  font-size: 1.1vw;
+}
+
+.carte-texte p {
+  margin: 0.4em 0;
+  font-size: 1.1vw;
+}
+
+.carte-texte strong {
+  font-size: 1.1vw;
+}
+
+/* ---------- Section 6 : contact + newsletter ---------- */
+.contact {
+  position: relative;
+  margin-top: 4%;
+  padding: 7% 5% 2%;
+  background-color: #d8d2cb;
+}
+
+.newsletter {
+  position: absolute;
+  top: -3vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45%;
+  padding: 1vw 2vw;
+  background-color: #f9cb95;
+  border-radius: 45px;
+  text-align: center;
+}
+
+.newsletter strong {
+  font-size: 1.9vw;
+}
+
+.newsletter-champs {
+  display: flex;
+  justify-content: center;
+  gap: 0.6vw;
+  margin-top: 0.8vw;
+}
+
+.newsletter input {
+  width: 60%;
+  padding: 0.6vw 1.2vw;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1vw;
+}
+
+.newsletter button {
+  padding: 0.6vw 1.5vw;
+  border: none;
+  border-radius: 30px;
+  background-color: #ff8d28;
+  color: white;
+  font-size: 1.1vw;
+  cursor: pointer;
+}
+
+.message {
+  margin: 0.6vw 0 0;
+  font-size: 1vw;
+}
+
+.contact-grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vw 4%;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.contact-grille h2 {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.8vw;
+}
+
+.contact-grille address {
+  font-style: normal;
+  font-size: 1.5vw;
+  line-height: 1.8;
+}
+
+.contact-grille address p {
+  margin: 0;
+}
+
+.reseaux {
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+  font-size: 1.5vw;
+}
+
+.reseaux img {
+  height: 3.5vw;
+  width: auto;
+}
+
+.liens-legaux {
+  display: flex;
+  justify-content: center;
+  gap: 8%;
+  margin-top: 4%;
+  padding-top: 2%;
+  border-top: 1px solid #21152e;
+  font-size: 1.5vw;
+}
+
+.liens-legaux a {
+  color: #21152e;
+  text-decoration: none;
+}
+
+/* ---------- Version mobile (écrans étroits) ---------- */
+@media (max-width: 700px) {
+  .hero-titre { font-size: 4.5vw; }
+  .hero-soustitre { font-size: 3.5vw; }
+  .bouton-orange { font-size: 3vw; padding: 1vw 4vw; }
+
+  .citation { font-size: 5vw; }
+  .texte-presentation { font-size: 3vw; }
+  .point { width: 3vw; height: 3vw; }
+
+  .artistes { grid-template-columns: 1fr; }
+  .artistes-texte h2 { font-size: 5vw; }
+  .artistes-texte p { font-size: 3vw; }
+  .bouton-infos { font-size: 3vw; padding: 1vw 6vw; }
+
+  .intentions h2 { font-size: 4.5vw; }
+  .intention p { font-size: 2.8vw; }
+  .intention img { height: 16vw; }
+
+  .ateliers h2 { font-size: 5vw; }
+  .carte { flex: 0 0 70%; }
+  .carte-ligne h3 { font-size: 4vw; }
+  .carte-ligne span,
+  .carte-texte p,
+  .carte-texte strong { font-size: 2.8vw; }
+
+  .newsletter { width: 85%; top: -5vw; padding: 2vw; }
+  .newsletter strong { font-size: 3.5vw; }
+  .newsletter input,
+  .newsletter button { font-size: 2.5vw; padding: 1.2vw 2.5vw; }
+  .message { font-size: 2.3vw; }
+
+  .contact-grille { grid-template-columns: 1fr; }
+  .contact-grille h2 { font-size: 3.8vw; }
+  .contact-grille address,
+  .reseaux { font-size: 3vw; }
+  .reseaux img { height: 7vw; }
+  .liens-legaux { font-size: 2.6vw; }
 }
