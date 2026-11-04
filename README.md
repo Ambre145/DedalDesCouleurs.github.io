@@ -1,7 +1,33 @@
+<header class="hero">
+  <h1>Dedal des couleurs</h1>
+  <p>Un petit sous-titre</p>
+</header>
+
+.hero {
+  background-image: url("GUIMBAULT_Noham.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+}
+
+</div>
+<div style="position: relative; text-align: center; color: white;">
+ <img src="GUIMBAULT_Noham.jpg" alt="Description de l'image">
+  <div style="position: absolute; top: 50%; left: 20%; transform: translate(-50%, -50%); width: 80%;">
+    <h1 style="margin: 0; font-size: 2.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">Dedal des couleurs</h1>
+  </div>
+</div>
+
+
   return (
-    <div className="w-[413px] h-[81px]">
-      <h1 className="fixed top-[67px] left-[66px] w-[413px] [font-family:'Playfair_Display-Regular',Helvetica] font-normal text-[#21152e] text-5xl text-center tracking-[0] leading-[normal]">
-        Dedal des couleurs
       </h1>
     </div>
   return (
