@@ -46,10 +46,19 @@
       </p>
     </div>
 
-    <div class="carrousel">
-      <img src="GUIMBAULT_Noham_B2A_Etudes_de_maitres.jpg" alt="GUIMBAULT_Noham_B2A_Etudes_de_maitres.jpg">
-      <img src="GUIMBAULT_Noham_B2A_Silouhettes.jpg" alt="GUIMBAULT_Noham_B2A_Silouhettes.jpg">
-    </div>
+   <script>
+    // Carrousel : les flèches font défiler d'une image
+    const carrousel = document.getElementById('carrousel');
+    function pas() {
+      return carrousel.querySelector('img').offsetWidth + 16;
+    }
+    document.getElementById('next').addEventListener('click', function () {
+      carrousel.scrollBy({ left: pas(), behavior: 'smooth' });
+    });
+    document.getElementById('prev').addEventListener('click', function () {
+      carrousel.scrollBy({ left: -pas(), behavior: 'smooth' });
+    });
+  </script>
 
   <!-- SECTION 3 : NOS ARTISTES -->
   <section class="artistes" id="artistes">
