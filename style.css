@@ -127,11 +127,11 @@ img {
   flex: 0 0 auto;
   width: 46%;
   min-width: 0;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   background: white;
   border: 1px solid #21152e;
-  border-radius: 15px;
+  border-radius: 4px;
   scroll-snap-align: start;
 }
 
