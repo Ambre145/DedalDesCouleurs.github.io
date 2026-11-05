@@ -17,9 +17,9 @@
     <h2 class="hero-soustitre">L'Animation par Noham Guimbault</h2>
     <a href="#artistes" class="bouton-orange">En savoir +</a>
 
-    <img class="hero-img img-lineup" src="lineup-persos.png" alt="Lineup Chara secondaire.png">
-    <img class="hero-img img-decor" src="decor-canape.png" alt="SCÈNE_03_BACKGROUND.png">
-    <img class="hero-img img-scene" src="SCÈNE_03_BACKGROUND.png" alt="Illustration_1_BARRET_Tristan_GUIMBAULT_Noham.png">
+    <img class="hero-img img-lineup" src="lineup-persos.png" alt="Lineup de personnages">
+    <img class="hero-img img-decor" src="decor-canape.png" alt="Décor de scène">
+    <img class="hero-img img-scene" src="SCÈNE_03_BACKGROUND.png" alt="Illustration de scène">
   </header>
 
   <!-- SECTION 2 : PRÉSENTATION + CARROUSEL -->
@@ -46,19 +46,20 @@
       </p>
     </div>
 
-   <script>
-    // Carrousel : les flèches font défiler d'une image
-    const carrousel = document.getElementById('carrousel');
-    function pas() {
-      return carrousel.querySelector('img').offsetWidth + 16;
-    }
-    document.getElementById('next').addEventListener('click', function () {
-      carrousel.scrollBy({ left: pas(), behavior: 'smooth' });
-    });
-    document.getElementById('prev').addEventListener('click', function () {
-      carrousel.scrollBy({ left: -pas(), behavior: 'smooth' });
-    });
-  </script>
+    <div class="carrousel-zone">
+      <button type="button" class="fleche" id="prev" aria-label="Précédent">&#8249;</button>
+
+      <div class="carrousel" id="carrousel">
+        <img src="etudes-maitres.png" alt="Études de maîtres de Noham Guimbault">
+        <img src="silhouettes.png" alt="Silhouettes de Noham Guimbault">
+        <img src="carrousel-3.png" alt="Illustration 3">
+        <img src="carrousel-4.png" alt="Illustration 4">
+        <img src="carrousel-5.png" alt="Illustration 5">
+      </div>
+
+      <button type="button" class="fleche" id="next" aria-label="Suivant">&#8250;</button>
+    </div>
+  </section>
 
   <!-- SECTION 3 : NOS ARTISTES -->
   <section class="artistes" id="artistes">
@@ -204,6 +205,18 @@
       document.getElementById('message-newsletter').textContent =
         'Merci ! Votre inscription a bien été prise en compte.';
       this.reset();
+    });
+
+    // Carrousel : les flèches font défiler d'une image
+    const carrousel = document.getElementById('carrousel');
+    function pas() {
+      return carrousel.querySelector('img').offsetWidth + 16;
+    }
+    document.getElementById('next').addEventListener('click', function () {
+      carrousel.scrollBy({ left: pas(), behavior: 'smooth' });
+    });
+    document.getElementById('prev').addEventListener('click', function () {
+      carrousel.scrollBy({ left: -pas(), behavior: 'smooth' });
     });
   </script>
 
