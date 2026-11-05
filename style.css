@@ -102,27 +102,55 @@ img {
   margin: 0 0 1.5em;
 }
 
+.carrousel-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  padding: 0 3%;
+}
+
 .carrousel {
   display: flex;
-  justify-content: center;
-  gap: 1.5%;
-  padding: 0 2.5%;
+  gap: 16px;
+  width: 75%;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carrousel::-webkit-scrollbar {
+  display: none;
 }
 
 .carrousel img {
   flex: 0 0 auto;
-  width: 28%;
+  width: 46%;
   min-width: 0;
-  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
   background: white;
   border: 1px solid #21152e;
   border-radius: 15px;
   scroll-snap-align: start;
-  object-fit: cover;
 }
 
+.fleche {
+  flex: 0 0 auto;
+  width: 3vw;
+  height: 3vw;
+  min-width: 30px;
+  min-height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffe8a3;
+  color: #ff8d28;
+  font-size: 2vw;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Points décoratifs (utilisés dans la section ateliers) */
 .points {
   display: flex;
   justify-content: center;
@@ -403,7 +431,8 @@ img {
 
   .citation { font-size: 4vw; }
   .texte-presentation { max-width: 90%; font-size: 2.4vw; }
-  .carrousel img { flex: 0 0 70%; }
+  .carrousel { width: 80%; }
+  .carrousel img { width: 85%; }
   .point { width: 2vw; height: 2vw; }
 
   .artistes { grid-template-columns: 1fr; }
