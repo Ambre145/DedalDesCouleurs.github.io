@@ -210,12 +210,12 @@ img {
   aspect-ratio: 1 / 0.95;
 }
 
-rtistes-images {
+artistes-images {
   position: relative;
   width: 80%;
   margin: 0 auto;
   aspect-ratio: 1 / 0.95;
-  top: -6%;
+  transform: translateY(-10%);
 }
 
 .art-1 { top: 0;   left: 0;  width: 65%; aspect-ratio: 1.8 / 1; z-index: 1; }
