@@ -208,19 +208,21 @@ img {
   width: 80%;
   margin: 0 auto;
   aspect-ratio: 1 / 0.95;
+  transform: translateY(-10%);
 }
 
-artistes-images {
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  aspect-ratio: 1 / 0.95;
-  transform: translateY(-10%);
+.artistes-images img {
+  position: absolute;
+  object-fit: cover;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .art-1 { top: 0;   left: 0;  width: 65%; aspect-ratio: 1.8 / 1; z-index: 1; }
 .art-2 { top: 30%; right: 0; width: 55%; aspect-ratio: 1.4 / 1; z-index: 2; }
 .art-3 { top: 54%; left: 5%; width: 70%; aspect-ratio: 1.6 / 1; z-index: 3; }
+
 
 /* ---------- Section 4 : intentions ---------- */
 .intentions {
