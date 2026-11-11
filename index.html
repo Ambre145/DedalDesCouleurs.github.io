@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dedal des couleurs</title>
+<h1 class="hero-titre"><button type="button" class="titre-menu" onclick="document.getElementById('menu').hidden = false">Dedal des couleurs</button></h1>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Montserrat:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body>
 
 <nav class="menu" id="menu" hidden>
-<button type="button" class="menu-fermer" id="fermer-menu" aria-label="Fermer le menu">✕</button>
+<button type="button" class="menu-fermer" onclick="document.getElementById('menu').hidden = true" aria-label="Fermer le menu">✕</button>
 <a href="index.html">Accueil</a>
 <a href="galerie.html">La galerie</a>
 <a href="animation.html">L'animation</a>
