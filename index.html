@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<h1 class="hero-titre"><button type="button" class="titre-menu" onclick="document.getElementById('menu').hidden = false">Dedal des couleurs</button></h1>
+  <title>Dedal des couleurs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Montserrat:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-  <script src="site.js"></script>
 <body>
 
-<nav class="menu" id="menu" hidden>
-<button type="button" class="menu-fermer" onclick="document.getElementById('menu').hidden = true" aria-label="Fermer le menu">✕</button>
-<a href="index.html">Accueil</a>
-<a href="galerie.html">La galerie</a>
-<a href="animation.html">L'animation</a>
+  <nav class="menu" id="menu" hidden>
+    <button type="button" class="menu-fermer" id="fermer-menu" aria-label="Fermer le menu">✕</button>
+    <a href="index.html">Accueil</a>
+    <a href="galerie.html">La galerie</a>
+    <a href="animation.html">L'animation</a>
   </nav>
-  
+
   <!-- SECTION 1 : BANNIÈRE -->
   <header class="hero">
     <h1 class="hero-titre"><button type="button" class="titre-menu" data-ouvrir-menu>Dedal des couleurs</button></h1>
     <h2 class="hero-soustitre">L'Animation par Noham Guimbault</h2>
-    <a href="#artistes" class="bouton-orange">En savoir +</a>
+    <a href="animation.html" class="bouton-orange">En savoir +</a>
 
     <img class="hero-img img-lineup" src="Lineup Chara secondaire.png" alt="Lineup de personnages">
     <img class="hero-img img-decor" src="SCÈNE_03_BACKGROUND.png" alt="Décor de scène">
@@ -206,15 +205,8 @@
     </nav>
   </section>
 
+  <script src="site.js"></script>
   <script>
-    // Message de confirmation à l'envoi de la newsletter
-    document.getElementById('newsletter').addEventListener('submit', function (e) {
-      e.preventDefault();
-      document.getElementById('message-newsletter').textContent =
-        'Merci ! Votre inscription a bien été prise en compte.';
-      this.reset();
-    });
-
     // Carrousel : les flèches font défiler d'une image
     const carrousel = document.getElementById('carrousel');
     function pas() {
