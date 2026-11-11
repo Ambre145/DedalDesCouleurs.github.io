@@ -639,3 +639,19 @@ img {
   .bloc-texte { font-size: 3vw; }
   .bloc-texte .etiquette { font-size: 3vw; }
 }
+
+
+/* Bouton En savoir + (prioritaire) */
+.hero .bouton-orange {
+  position: absolute;
+  top: 44%;
+  left: 3.5%;
+  padding: 0.4vw 1.6vw;
+  font-size: 1.6vw;
+  background-color: #ffe8a3;
+  border: 1px solid #ff8d28;
+  border-radius: 45px;
+  color: #ff8d28;
+  font-family: 'Instrument Serif', serif;
+  text-decoration: none;
+}
