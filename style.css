@@ -467,3 +467,174 @@ img {
   .reseaux img { height: 6vw; }
   .liens-legaux { font-size: 2.3vw; }
 }
+
+/* ---------- Menu ---------- */
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vw;
+  background-color: rgba(33, 21, 46, 0.95);
+}
+
+.menu[hidden] {
+  display: none;
+}
+
+.menu a {
+  color: #ffe8a3;
+  font-family: 'Playfair Display', serif;
+  font-size: 3vw;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #ff8d28;
+}
+
+.menu-fermer {
+  position: absolute;
+  top: 2vw;
+  right: 3vw;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 3vw;
+  cursor: pointer;
+}
+
+/* Titre cliquable sur la homepage */
+.titre-menu {
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.titre-menu::after {
+  content: " ▾";
+  font-size: 0.5em;
+}
+
+/* ---------- Barre avec menu hamburger (pages secondaires) ---------- */
+.barre {
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+  padding: 1vw 3vw;
+  background-color: rgba(33, 21, 46, 0.75);
+  color: white;
+}
+
+.hamburger {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 2vw;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.barre-titre {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6vw;
+  text-decoration: none;
+}
+
+/* ---------- Page La Galerie ---------- */
+.galerie-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 2 / 1;
+  background-image: url("galerie-salle.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.galerie-hero .barre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.galerie-hero h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 3vw;
+  color: #21152e;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+.bloc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  align-items: center;
+  padding: 5% 10%;
+}
+
+.bloc.gris {
+  background-color: #d8d2cb;
+}
+
+.bloc.inverse .bloc-img {
+  order: 2;
+}
+
+.bloc-img img {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.bloc-texte {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1vw;
+  line-height: 1.5;
+}
+
+.bloc-texte .etiquette {
+  margin: 0 0 0.5em;
+  font-size: 1vw;
+}
+
+.bloc-texte .citation-bloc {
+  padding-left: 1.5vw;
+  border-left: 1px solid #21152e;
+}
+
+.bloc-texte p {
+  margin: 0 0 1em;
+}
+
+.bloc-texte ul {
+  margin: 0 0 1em;
+  padding-left: 1.5em;
+}
+
+@media (max-width: 700px) {
+  .barre-titre { font-size: 4vw; }
+  .hamburger { font-size: 5vw; }
+  .menu a { font-size: 6vw; }
+  .menu-fermer { font-size: 6vw; }
+
+  .galerie-hero h1 { font-size: 5vw; }
+  .bloc { grid-template-columns: 1fr; padding: 8% 6%; }
+  .bloc.inverse .bloc-img { order: 0; }
+  .bloc-img img { width: 90%; }
+  .bloc-texte { font-size: 3vw; }
+  .bloc-texte .etiquette { font-size: 3vw; }
+}
