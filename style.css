@@ -655,3 +655,38 @@ img {
   font-family: 'Instrument Serif', serif;
   text-decoration: none;
 }
+
+/* ---------- Pages secondaires (animation, etc.) ---------- */
+.page-entete {
+  padding: 3% 6% 2%;
+  background-color: #d8d2cb;
+}
+
+.page-entete h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 2.6vw;
+}
+
+.page-contenu {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 4% 0;
+}
+
+.page-contenu h2 {
+  font-size: 1.7vw;
+}
+
+.page-contenu p {
+  font-size: 1.2vw;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .page-entete h1 { font-size: 5vw; }
+  .page-contenu { max-width: 88%; }
+  .page-contenu h2 { font-size: 4vw; }
+  .page-contenu p { font-size: 3vw; }
+}
