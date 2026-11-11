@@ -269,6 +269,7 @@ img {
 
 .ateliers-liste {
   display: flex;
+  justify-content: center;
   gap: 2.5%;
   overflow-x: auto;
   padding-bottom: 10px;
