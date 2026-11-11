@@ -55,15 +55,15 @@ img {
 
 .bouton-orange {
   position: absolute;
-  top: 57%;
-  left: 3%;
-  padding: 0.6vw 2.4vw;
+  top: 47%;
+  left: 3.5%;
+  padding: 0.5vw 2vw;
   background-color: #ffe8a3;
   border: 1px solid #ff8d28;
   border-radius: 45px;
   color: #ff8d28;
   font-family: 'Instrument Serif', serif;
-  font-size: 2.4vw;
+  font-size: 2vw;
   text-decoration: none;
 }
 
