@@ -923,3 +923,26 @@ img {
 @media (max-width: 700px) {
   .page-animation .bloc.bloc-collage { grid-template-columns: 1fr; padding: 8% 6%; }
 }
+
+/* ---------- Collage : bandes noires rognées ---------- */
+.page-animation .bloc-collage .collage .cadre {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.page-animation .bloc-collage .collage .cadre img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transform: scale(1.15);
+}
+
+.page-animation .bloc-collage .collage .c1 { top: 0;   left: 18%; width: 70%; }
+.page-animation .bloc-collage .collage .c2 { top: 38%; left: 0;   width: 60%; }
+.page-animation .bloc-collage .collage .c3 { top: 52%; right: 0;  width: 50%; }
