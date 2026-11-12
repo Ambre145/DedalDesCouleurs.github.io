@@ -833,3 +833,60 @@ img {
 .collage .c1 { top: 0;   left: 12%; width: 80%; }
 .collage .c2 { top: 36%; left: 0;   width: 66%; }
 .collage .c3 { top: 52%; right: 0;  width: 56%; }
+
+/* ---------- Page animation uniquement ---------- */
+.page-animation .bloc {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 5%;
+  padding: 5% 6%;
+}
+
+.page-animation .bloc-img {
+  flex: 0 0 50%;
+  max-width: 50%;
+  min-width: 0;
+}
+
+.page-animation .bloc-texte {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* Cadre qui coupe les bandes noires */
+.page-animation .cadre {
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.page-animation .cadre img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transform: scale(1.15);
+}
+
+/* Collage du bloc 3 */
+.page-animation .collage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.9;
+}
+
+.page-animation .collage .cadre {
+  position: absolute;
+}
+
+.page-animation .collage .c1 { top: 0;   left: 12%; width: 80%; z-index: 1; }
+.page-animation .collage .c2 { top: 34%; left: 0;   width: 62%; z-index: 2; }
+.page-animation .collage .c3 { top: 52%; right: 0;  width: 52%; z-index: 3; }
+
+@media (max-width: 700px) {
+  .page-animation .bloc { flex-direction: column !important; padding: 8% 6%; }
+  .page-animation .bloc-img { flex: none; max-width: 100%; width: 100%; }
+}
