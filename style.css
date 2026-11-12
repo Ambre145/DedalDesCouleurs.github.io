@@ -784,7 +784,7 @@ img {
 /* ---------- Vidéo YouTube ---------- */
 .video-section {
   padding: 5% 0 2%;
-  text-align: center;
+  text-align:center;
 }
 
 .video-section h3 {
