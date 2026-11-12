@@ -884,81 +884,26 @@ img {
   min-width: 0;
 }
 
-/* Bloc collage : disposition d'origine */
+/* ---------- Collage fidèle à la maquette (version finale) ---------- */
 .page-animation .bloc.bloc-collage {
   display: grid !important;
-  grid-template-columns: 1fr 1fr;
-  gap: 5%;
-  padding: 5% 10%;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) !important;
+  gap: 3%;
   align-items: center;
+  padding: 5% 6% 5% 3%;
+  overflow: hidden;
 }
 
-.page-animation .bloc.bloc-collage .bloc-img {
+.page-animation .bloc-collage .bloc-img {
   flex: none;
   max-width: none;
+  min-width: 0;
 }
 
 .page-animation .bloc-collage .collage {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 0.85;
-}
-
-.page-animation .bloc-collage .collage img {
-  position: absolute;
-  display: block;
-  height: auto;
-  margin: 0;
-  object-fit: cover;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-  transform: none;
-}
-
-.page-animation .bloc-collage .collage .c1 { top: 0;   left: 18%; width: 70%; }
-.page-animation .bloc-collage .collage .c2 { top: 38%; left: 0;   width: 60%; }
-.page-animation .bloc-collage .collage .c3 { top: 52%; right: 0;  width: 50%; }
-
-@media (max-width: 700px) {
-  .page-animation .bloc.bloc-collage { grid-template-columns: 1fr; padding: 8% 6%; }
-}
-
-/* ---------- Collage : bandes noires rognées ---------- */
-.page-animation .bloc-collage .collage .cadre {
-  position: absolute;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-.page-animation .bloc-collage .collage .cadre img {
-  position: static;
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  border-radius: 0;
-  box-shadow: none;
-  transform: scale(1.15);
-}
-
-.page-animation .bloc-collage .collage .c1 { top: 0;   left: 18%; width: 70%; }
-.page-animation .bloc-collage .collage .c2 { top: 38%; left: 0;   width: 60%; }
-.page-animation .bloc-collage .collage .c3 { top: 52%; right: 0;  width: 50%; }
-
-
-/* ---------- Collage fidèle à la maquette Figma ---------- */
-.page-animation .bloc-collage {
-  grid-template-columns: 1.25fr 1fr;
-  gap: 3%;
-  padding: 5% 6% 5% 3%;
-}
-
-.page-animation .bloc-collage .collage {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 0.92;
+  aspect-ratio: 1 / 0.95;
 }
 
 .page-animation .bloc-collage .collage .cadre {
@@ -981,6 +926,14 @@ img {
 
 /* Haut : accessoires et pièce violette */
 .page-animation .bloc-collage .collage .c1 { top: 0;   left: 22%; width: 56%; z-index: 3; }
-/* Gauche : personnages en couleur */
-.page-animation .bloc-collage .collage .c2 { top: 33%; left: 0;   width: 52%; z-index: 2; }
-/* Bas droite :
+/* Bas gauche : personnages en couleur */
+.page-animation .bloc-collage .collage .c2 { top: 40%; left: 0;   width: 54%; z-index: 2; }
+/* Bas droite : planche de silhouettes */
+.page-animation .bloc-collage .collage .c3 { top: 52%; left: 54%; width: 44%; z-index: 1; }
+
+@media (max-width: 700px) {
+  .page-animation .bloc.bloc-collage {
+    grid-template-columns: minmax(0, 1fr) !important;
+    padding: 8% 6%;
+  }
+}
