@@ -946,3 +946,41 @@ img {
 .page-animation .bloc-collage .collage .c1 { top: 0;   left: 18%; width: 70%; }
 .page-animation .bloc-collage .collage .c2 { top: 38%; left: 0;   width: 60%; }
 .page-animation .bloc-collage .collage .c3 { top: 52%; right: 0;  width: 50%; }
+
+
+/* ---------- Collage fidèle à la maquette Figma ---------- */
+.page-animation .bloc-collage {
+  grid-template-columns: 1.25fr 1fr;
+  gap: 3%;
+  padding: 5% 6% 5% 3%;
+}
+
+.page-animation .bloc-collage .collage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.92;
+}
+
+.page-animation .bloc-collage .collage .cadre {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.page-animation .bloc-collage .collage .cadre img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transform: scale(1.06);
+}
+
+/* Haut : accessoires et pièce violette */
+.page-animation .bloc-collage .collage .c1 { top: 0;   left: 22%; width: 56%; z-index: 3; }
+/* Gauche : personnages en couleur */
+.page-animation .bloc-collage .collage .c2 { top: 33%; left: 0;   width: 52%; z-index: 2; }
+/* Bas droite :
