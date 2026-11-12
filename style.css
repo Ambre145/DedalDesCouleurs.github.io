@@ -811,3 +811,25 @@ img {
   .video-section h3 { font-size: 4vw; }
   .video { width: 90%; }
 }
+
+/* ---------- Page animation : images plus grandes ---------- */
+.bloc {
+  padding: 5% 6%;
+  gap: 4%;
+}
+
+.bloc-img img {
+  width: 100%;
+}
+
+.bloc-img .collage img {
+  width: auto;
+}
+
+.collage {
+  width: 100%;
+}
+
+.collage .c1 { top: 0;   left: 12%; width: 80%; }
+.collage .c2 { top: 36%; left: 0;   width: 66%; }
+.collage .c3 { top: 52%; right: 0;  width: 56%; }
