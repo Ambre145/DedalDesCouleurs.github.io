@@ -24,7 +24,7 @@ img {
   left: -9999px;
 }
 
-/* ---------- Section 1 : bannière ---------- */
+/* ---------- Accueil, section 1 : bannière ---------- */
 .hero {
   position: relative;
   background-image: url("GUIMBAULT_Noham.jpg");
@@ -53,17 +53,17 @@ img {
   font-size: 2.3vw;
 }
 
-.bouton-orange {
+.hero .bouton-orange {
   position: absolute;
   top: 44%;
   left: 3.5%;
-  padding: 0.5vw 2vw;
+  padding: 0.4vw 1.6vw;
+  font-size: 1.6vw;
   background-color: #ffe8a3;
   border: 1px solid #ff8d28;
   border-radius: 45px;
   color: #ff8d28;
   font-family: 'Instrument Serif', serif;
-  font-size: 2vw;
   text-decoration: none;
 }
 
@@ -76,9 +76,9 @@ img {
 
 .img-lineup { top: 6%;  left: 65%;   width: 32.5%; height: 44%; background: white; }
 .img-decor  { top: 29%; left: 47%;   width: 31.5%; height: 28%; }
-.img-scene  { top: 52%; left: 59%; width: 36%; height: 38%; }
+.img-scene  { top: 52%; left: 59%;   width: 36%;   height: 38%; }
 
-/* ---------- Section 2 : présentation + carrousel ---------- */
+/* ---------- Accueil, section 2 : présentation + carrousel ---------- */
 .presentation {
   padding: 4% 0 4%;
   text-align: center;
@@ -87,7 +87,7 @@ img {
 .citation {
   margin: 0 auto 3%;
   font-family: 'Playfair Display', serif;
-  font-size: 2.4vw;
+  font-size: 2vw;
   line-height: 1.3;
 }
 
@@ -150,7 +150,6 @@ img {
   cursor: pointer;
 }
 
-/* Points décoratifs (utilisés dans la section ateliers) */
 .points {
   display: flex;
   justify-content: center;
@@ -170,7 +169,7 @@ img {
   background: #aaa;
 }
 
-/* ---------- Section 3 : Nos Artistes ---------- */
+/* ---------- Accueil, section 3 : Nos Artistes ---------- */
 .artistes {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -182,7 +181,7 @@ img {
 
 .artistes-texte h2 {
   margin: 0 0 1em;
-  font-size: 2vw;
+  font-size: 1.6vw;
 }
 
 .artistes-texte p {
@@ -202,7 +201,6 @@ img {
   text-decoration: none;
 }
 
-/* Les 3 images se chevauchent légèrement */
 .artistes-images {
   position: relative;
   width: 80%;
@@ -223,8 +221,7 @@ img {
 .art-2 { top: 30%; right: 0; width: 55%; aspect-ratio: 1.4 / 1; z-index: 2; }
 .art-3 { top: 54%; left: 5%; width: 70%; aspect-ratio: 1.6 / 1; z-index: 3; }
 
-
-/* ---------- Section 4 : intentions ---------- */
+/* ---------- Accueil, section 4 : intentions ---------- */
 .intentions {
   padding: 5% 5% 2%;
   text-align: center;
@@ -232,7 +229,7 @@ img {
 
 .intentions h2 {
   margin: 0 0 4%;
-  font-size: 2vw;
+  font-size: 1.6vw;
 }
 
 .intentions-liste {
@@ -257,14 +254,14 @@ img {
   line-height: 1.6;
 }
 
-/* ---------- Section 5 : ateliers ---------- */
+/* ---------- Accueil, section 5 : ateliers ---------- */
 .ateliers {
   padding: 3% 5% 5%;
 }
 
 .ateliers h2 {
   margin: 0 0 2.5%;
-  font-size: 2.2vw;
+  font-size: 1.7vw;
 }
 
 .ateliers-liste {
@@ -318,622 +315,4 @@ img {
 
 .carte-texte strong {
   font-size: 0.9vw;
-}
-
-/* ---------- Section 6 : contact + newsletter ---------- */
-.contact {
-  position: relative;
-  margin-top: 4%;
-  padding: 6% 6% 2%;
-  background-color: #d8d2cb;
-}
-
-.newsletter {
-  position: absolute;
-  top: -3vw;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 42%;
-  padding: 1vw 1.5vw;
-  background-color: #f9cb95;
-  border-radius: 45px;
-  text-align: center;
-}
-
-.newsletter strong {
-  font-size: 1.5vw;
-}
-
-.newsletter-champs {
-  display: flex;
-  justify-content: center;
-  gap: 0.5vw;
-  margin-top: 0.6vw;
-}
-
-.newsletter input {
-  width: 55%;
-  padding: 0.5vw 1vw;
-  border: none;
-  border-radius: 30px;
-  font-size: 1vw;
-}
-
-.newsletter button {
-  padding: 0.5vw 1.2vw;
-  border: none;
-  border-radius: 30px;
-  background-color: #ff8d28;
-  color: white;
-  font-size: 1vw;
-  cursor: pointer;
-}
-
-.message {
-  margin: 0.5vw 0 0;
-  font-size: 0.9vw;
-}
-
-.contact-grille {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5vw 4%;
-  align-items: center;
-  margin-top: 2%;
-}
-
-.contact-grille h2 {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1.4vw;
-}
-
-.contact-grille address {
-  font-style: normal;
-  font-size: 1.15vw;
-  line-height: 1.8;
-}
-
-.contact-grille address p {
-  margin: 0;
-}
-
-.reseaux {
-  display: flex;
-  align-items: center;
-  gap: 1vw;
-  font-size: 1.15vw;
-}
-
-.reseaux img {
-  height: 2.6vw;
-  width: auto;
-}
-
-.liens-legaux {
-  display: flex;
-  justify-content: center;
-  gap: 8%;
-  margin-top: 3%;
-  padding-top: 1.5%;
-  border-top: 1px solid #21152e;
-  font-size: 1.15vw;
-}
-
-.liens-legaux a {
-  color: #21152e;
-  text-decoration: none;
-}
-
-/* ---------- Version mobile (écrans étroits) ---------- */
-@media (max-width: 700px) {
-  .hero-titre { font-size: 4.5vw; }
-  .hero-soustitre { font-size: 3.5vw; }
-  .bouton-orange { font-size: 3vw; padding: 1vw 4vw; }
-
-  .citation { font-size: 4vw; }
-  .texte-presentation { max-width: 90%; font-size: 2.4vw; }
-  .carrousel { width: 80%; }
-  .carrousel img { width: 85%; }
-  .point { width: 2vw; height: 2vw; }
-
-  .artistes { grid-template-columns: 1fr; }
-  .artistes-images { width: 90%; }
-  .artistes-texte h2 { font-size: 4vw; }
-  .artistes-texte p { font-size: 2.6vw; }
-  .bouton-infos { font-size: 2.6vw; padding: 0.8vw 5vw; }
-
-  .intentions h2 { font-size: 3.8vw; }
-  .intention p { font-size: 2.3vw; }
-  .intention img { height: 11vw; }
-
-  .ateliers h2 { font-size: 4vw; }
-  .carte { flex: 0 0 65%; }
-  .carte-ligne h3 { font-size: 3vw; }
-  .carte-ligne span,
-  .carte-texte p,
-  .carte-texte strong { font-size: 2.2vw; }
-
-  .newsletter { width: 85%; top: -4vw; padding: 1.5vw; }
-  .newsletter strong { font-size: 3vw; }
-  .newsletter input,
-  .newsletter button { font-size: 2.2vw; padding: 1vw 2vw; }
-  .message { font-size: 2vw; }
-
-  .contact-grille { grid-template-columns: 1fr; }
-  .contact-grille h2 { font-size: 3vw; }
-  .contact-grille address,
-  .reseaux { font-size: 2.6vw; }
-  .reseaux img { height: 6vw; }
-  .liens-legaux { font-size: 2.3vw; }
-}
-
-/* ---------- Menu ---------- */
-.menu {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5vw;
-  background-color: rgba(33, 21, 46, 0.95);
-}
-
-.menu[hidden] {
-  display: none;
-}
-
-.menu a {
-  color: #ffe8a3;
-  font-family: 'Playfair Display', serif;
-  font-size: 3vw;
-  text-decoration: none;
-}
-
-.menu a:hover {
-  color: #ff8d28;
-}
-
-.menu-fermer {
-  position: absolute;
-  top: 2vw;
-  right: 3vw;
-  border: none;
-  background: none;
-  color: white;
-  font-size: 3vw;
-  cursor: pointer;
-}
-
-/* Titre cliquable sur la homepage */
-.titre-menu {
-  padding: 0;
-  border: none;
-  background: none;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
-}
-
-.titre-menu::after {
-  content: " ▾";
-  font-size: 0.5em;
-}
-
-/* ---------- Barre avec menu hamburger (pages secondaires) ---------- */
-.barre {
-  display: flex;
-  align-items: center;
-  gap: 1.5vw;
-  padding: 1vw 3vw;
-  background-color: rgba(33, 21, 46, 0.75);
-  color: white;
-}
-
-.hamburger {
-  border: none;
-  background: none;
-  color: white;
-  font-size: 2vw;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.barre-titre {
-  color: white;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6vw;
-  text-decoration: none;
-}
-
-/* ---------- Page La Galerie ---------- */
-.galerie-hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 2 / 1;
-  background-image: url("dannie-jing-3GZlhROZIQg-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.galerie-hero .barre {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.galerie-hero h1 {
-  margin: 0;
- font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  font-size: 3vw;
-  color: #21152e;
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
-}
-
-.bloc {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5%;
-  align-items: center;
-  padding: 5% 10%;
-}
-
-.bloc.gris {
-  background-color: #d8d2cb;
-}
-
-.bloc.inverse .bloc-img {
-  order: 2;
-}
-
-.bloc-img img {
-  display: block;
-  width: 70%;
-  margin: 0 auto;
-  border-radius: 15px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-.bloc-texte {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1vw;
-  line-height: 1.5;
-}
-
-.bloc-texte .etiquette {
-  margin: 0 0 0.5em;
-  font-size: 1vw;
-}
-
-.bloc-texte .citation-bloc {
-  padding-left: 1.5vw;
-  border-left: 1px solid #21152e;
-}
-
-.bloc-texte p {
-  margin: 0 0 1em;
-}
-
-.bloc-texte ul {
-  margin: 0 0 1em;
-  padding-left: 1.5em;
-}
-
-@media (max-width: 700px) {
-  .barre-titre { font-size: 4vw; }
-  .hamburger { font-size: 5vw; }
-  .menu a { font-size: 6vw; }
-  .menu-fermer { font-size: 6vw; }
-
-  .galerie-hero h1 { font-size: 5vw; }
-  .bloc { grid-template-columns: 1fr; padding: 8% 6%; }
-  .bloc.inverse .bloc-img { order: 0; }
-  .bloc-img img { width: 90%; }
-  .bloc-texte { font-size: 3vw; }
-  .bloc-texte .etiquette { font-size: 3vw; }
-}
-
-
-/* Bouton En savoir + (prioritaire) */
-.hero .bouton-orange {
-  position: absolute;
-  top: 44%;
-  left: 3.5%;
-  padding: 0.4vw 1.6vw;
-  font-size: 1.6vw;
-  background-color: #ffe8a3;
-  border: 1px solid #ff8d28;
-  border-radius: 45px;
-  color: #ff8d28;
-  font-family: 'Instrument Serif', serif;
-  text-decoration: none;
-}
-
-/* ---------- Pages secondaires (animation, etc.) ---------- */
-.page-entete {
-  padding: 3% 6% 2%;
-  background-color: #d8d2cb;
-}
-
-.page-entete h1 {
-  margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  font-size: 2.6vw;
-}
-
-.page-contenu {
-  max-width: 70%;
-  margin: 0 auto;
-  padding: 4% 0;
-}
-
-.page-contenu h2 {
-  font-size: 1.7vw;
-}
-
-.page-contenu p {
-  font-size: 1.2vw;
-  line-height: 1.6;
-}
-
-@media (max-width: 700px) {
-  .page-entete h1 { font-size: 5vw; }
-  .page-contenu { max-width: 88%; }
-  .page-contenu h2 { font-size: 4vw; }
-  .page-contenu p { font-size: 3vw; }
-}
-
-/* ---------- Page L'animation ---------- */
-.animation-hero {
-  position: relative;
-  aspect-ratio: 2 / 1;
-  background-image: url("GUIMBAULT_Noham.jpg");
-  background-size: cover;
-  background-position: center bottom;
-}
-
-.animation-hero .barre {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.animation-hero h1 {
-  position: absolute;
-  top: 18%;
-  left: 4%;
-  width: 32%;
-  margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  font-size: 2.2vw;
-  line-height: 1.2;
-  color: #21152e;
-}
-
-/* Collage de 3 images qui se chevauchent */
-.collage {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 0.85;
-}
-
-.bloc-img .collage img {
-  position: absolute;
-  display: block;
-  margin: 0;
-  object-fit: cover;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-.collage .c1 { top: 0;   left: 18%; width: 70%; }
-.collage .c2 { top: 38%; left: 0;   width: 60%; }
-.collage .c3 { top: 52%; right: 0;  width: 50%; }
-
-/* Vidéo YouTube (optionnel) */
-.video {
-  width: 60%;
-  margin: 4% auto;
-  aspect-ratio: 16 / 9;
-}
-
-.video iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 12px;
-}
-
-/* Message final */
-.oeuvre-contact {
-  max-width: 70%;
-  margin: 0 auto;
-  padding: 6% 0 8%;
-  font-family: 'Playfair Display', serif;
-}
-
-.oeuvre-contact h3 {
-  margin: 0 0 0.6em;
-  font-size: 1.3vw;
-}
-
-.oeuvre-contact p {
-  margin: 0;
-  font-size: 1.1vw;
-  line-height: 1.5;
-}
-
-@media (max-width: 700px) {
-  .animation-hero h1 { font-size: 4.5vw; width: 50%; }
-  .oeuvre-contact { max-width: 88%; }
-  .oeuvre-contact h3 { font-size: 3.5vw; }
-  .oeuvre-contact p { font-size: 3vw; }
-}
-
-/* ---------- Vidéo YouTube ---------- */
-.video-section {
-  padding: 5% 0 2%;
-  text-align: center;
-}
-
-.video-section h3 {
-  margin: 0 0 1.5%;
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  font-size: 1.6vw;
-}
-
-.video {
-  width: 60%;
-  margin: 0 auto;
-  aspect-ratio: 16 / 9;
-}
-
-.video iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  border-radius: 12px;
-}
-
-@media (max-width: 700px) {
-  .video-section h3 { font-size: 4vw; }
-  .video { width: 90%; }
-}
-
-/* ---------- Page animation uniquement ---------- */
-.page-animation .bloc {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center;
-  gap: 5%;
-  padding: 5% 6%;
-}
-
-.page-animation .bloc-img {
-  flex: 0 0 50%;
-  max-width: 50%;
-  min-width: 0;
-}
-
-.page-animation .bloc-texte {
-  flex: 1 1 0;
-  min-width: 0;
-}
-
-/* Cadre qui coupe les bandes noires */
-.page-animation .cadre {
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-.page-animation .cadre img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  border-radius: 0;
-  box-shadow: none;
-  transform: scale(1.15);
-}
-
-/* Collage du bloc 3 */
-.page-animation .collage {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 0.9;
-}
-
-.page-animation .collage .cadre {
-  position: absolute;
-}
-
-.page-animation .collage .c1 { top: 0;   left: 12%; width: 80%; z-index: 1; }
-.page-animation .collage .c2 { top: 34%; left: 0;   width: 62%; z-index: 2; }
-.page-animation .collage .c3 { top: 52%; right: 0;  width: 52%; z-index: 3; }
-
-@media (max-width: 700px) {
-  .page-animation .bloc { flex-direction: column !important; padding: 8% 6%; }
-  .page-animation .bloc-img { flex: none; max-width: 100%; width: 100%; }
-}
-
-/* ---------- Page animation : corrections ---------- */
-.page-animation .bloc {
-  flex-wrap: nowrap !important;
-}
-
-.page-animation .bloc.gris .bloc-img {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.page-animation .bloc.gris .bloc-texte {
-  flex: 1 1 0;
-  min-width: 0;
-}
-
-/* ---------- Collage fidèle à la maquette (version finale) ---------- */
-.page-animation .bloc.bloc-collage {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) !important;
-  gap: 3%;
-  align-items: center;
-  padding: 5% 6% 5% 3%;
-  overflow: hidden;
-}
-
-.page-animation .bloc-collage .bloc-img {
-  flex: none;
-  max-width: none;
-  min-width: 0;
-}
-
-.page-animation .bloc-collage .collage {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 0.95;
-}
-
-.page-animation .bloc-collage .collage .cadre {
-  position: absolute;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-.page-animation .bloc-collage .collage .cadre img {
-  position: static;
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  border-radius: 0;
-  box-shadow: none;
-  transform: scale(1.06);
-}
-
-/* Haut : accessoires et pièce violette */
-.page-animation .bloc-collage .collage .c1 { top: 0;   left: 22%; width: 56%; z-index: 3; }
-/* Bas gauche : personnages en couleur */
-.page-animation .bloc-collage .collage .c2 { top: 40%; left: 0;   width: 54%; z-index: 2; }
-/* Bas droite : planche de silhouettes */
-.page-animation .bloc-collage .collage .c3 { top: 52%; left: 54%; width: 44%; z-index: 1; }
-
-@media (max-width: 700px) {
-  .page-animation .bloc.bloc-collage {
-    grid-template-columns: minmax(0, 1fr) !important;
-    padding: 8% 6%;
-  }
 }
