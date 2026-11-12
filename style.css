@@ -814,31 +814,32 @@ img {
 
 /* ---------- Page animation uniquement ---------- */
 .page-animation .bloc {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 4%;
-  padding: 5% 4%;
+  display: flex !important;
+  flex-direction: row !important;
   align-items: center;
+  gap: 5%;
+  padding: 5% 6%;
 }
 
 .page-animation .bloc-img {
+  flex: 0 0 50%;
+  max-width: 50%;
   min-width: 0;
 }
 
-.page-animation .bloc-img > img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
+.page-animation .bloc-texte {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
-/* Image zoomée pour couper les bandes noires */
-.page-animation .zoom-cadre {
+/* Cadre qui coupe les bandes noires */
+.page-animation .cadre {
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
-.page-animation .zoom-cadre img {
+.page-animation .cadre img {
   display: block;
   width: 100%;
   height: auto;
@@ -852,22 +853,18 @@ img {
 .page-animation .collage {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 0.85;
+  aspect-ratio: 1 / 0.9;
 }
 
-.page-animation .bloc-img .collage img {
+.page-animation .collage .cadre {
   position: absolute;
-  height: auto;
-  margin: 0;
 }
 
-.page-animation .bloc-img .collage .c1 { top: 0;   left: 12%; width: 80%; }
-.page-animation .bloc-img .collage .c2 { top: 36%; left: 0;    width: 66%; }
-.page-animation .bloc-img .collage .c3 { top: 52%; right: 0;   width: 56%; }
+.page-animation .collage .c1 { top: 0;   left: 12%; width: 80%; z-index: 1; }
+.page-animation .collage .c2 { top: 34%; left: 0;   width: 62%; z-index: 2; }
+.page-animation .collage .c3 { top: 52%; right: 0;  width: 52%; z-index: 3; }
 
 @media (max-width: 700px) {
-  .page-animation .bloc {
-    grid-template-columns: minmax(0, 1fr);
-    padding: 8% 6%;
-  }
+  .page-animation .bloc { flex-direction: column !important; padding: 8% 6%; }
+  .page-animation .bloc-img { flex: none; max-width: 100%; width: 100%; }
 }
