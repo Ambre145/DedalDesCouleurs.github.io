@@ -469,6 +469,57 @@ img {
   .liens-legaux { font-size: 2.3vw; }
 }
 
+/* ---------- Animations CSS ---------- */
+
+/* 1. Le titre de la bannière apparaît en fondu */
+@keyframes apparition {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-titre,
+.hero-soustitre {
+  animation: apparition 1s ease-out both;
+}
+
+.hero-soustitre {
+  animation-delay: 0.3s;
+}
+
+/* 2. Les cartes d'ateliers se soulèvent au survol */
+.carte {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. Les boutons orange grossissent légèrement au survol */
+.hero .bouton-orange,
+.bouton-infos {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero .bouton-orange:hover,
+.bouton-infos:hover {
+  transform: scale(1.08);
+  background-color: #ffd96b;
+}
+
+/* Respect des personnes qui désactivent les animations */
+@media (prefers-reduced-motion: reduce) {
+  .hero-titre,
+  .hero-soustitre {
+    animation: none;
+  }
+  .carte,
+  .hero .bouton-orange,
+  .bouton-infos {
+    transition: none;
+  }
+
 /* ---------- Menu ---------- */
 .menu {
   position: fixed;
@@ -928,54 +979,3 @@ img {
   .page-animation .bloc { flex-direction: column !important; padding: 8% 6%; }
   .page-animation .bloc-img { flex: none; max-width: 100%; width: 100%; }
 }
-
-/* ---------- Animations CSS ---------- */
-
-/* 1. Le titre de la bannière apparaît en fondu */
-@keyframes apparition {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-.hero-titre,
-.hero-soustitre {
-  animation: apparition 1s ease-out both;
-}
-
-.hero-soustitre {
-  animation-delay: 0.3s;
-}
-
-/* 2. Les cartes d'ateliers se soulèvent au survol */
-.carte {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.carte:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-
-/* 3. Les boutons orange grossissent légèrement au survol */
-.hero .bouton-orange,
-.bouton-infos {
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.hero .bouton-orange:hover,
-.bouton-infos:hover {
-  transform: scale(1.08);
-  background-color: #ffd96b;
-}
-
-/* Respect des personnes qui désactivent les animations */
-@media (prefers-reduced-motion: reduce) {
-  .hero-titre,
-  .hero-soustitre {
-    animation: none;
-  }
-  .carte,
-  .hero .bouton-orange,
-  .bouton-infos {
-    transition: none;
-  }
