@@ -519,7 +519,7 @@ img {
   .bouton-infos {
     transition: none;
   }
-
+}
 /* ---------- Menu ---------- */
 .menu {
   position: fixed;
