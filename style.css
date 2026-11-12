@@ -868,3 +868,58 @@ img {
   .page-animation .bloc { flex-direction: column !important; padding: 8% 6%; }
   .page-animation .bloc-img { flex: none; max-width: 100%; width: 100%; }
 }
+
+/* ---------- Page animation : corrections ---------- */
+.page-animation .bloc {
+  flex-wrap: nowrap !important;
+}
+
+.page-animation .bloc.gris .bloc-img {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.page-animation .bloc.gris .bloc-texte {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* Bloc collage : disposition d'origine */
+.page-animation .bloc.bloc-collage {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  padding: 5% 10%;
+  align-items: center;
+}
+
+.page-animation .bloc.bloc-collage .bloc-img {
+  flex: none;
+  max-width: none;
+}
+
+.page-animation .bloc-collage .collage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.85;
+}
+
+.page-animation .bloc-collage .collage img {
+  position: absolute;
+  display: block;
+  height: auto;
+  margin: 0;
+  object-fit: cover;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transform: none;
+}
+
+.page-animation .bloc-collage .collage .c1 { top: 0;   left: 18%; width: 70%; }
+.page-animation .bloc-collage .collage .c2 { top: 38%; left: 0;   width: 60%; }
+.page-animation .bloc-collage .collage .c3 { top: 52%; right: 0;  width: 50%; }
+
+@media (max-width: 700px) {
+  .page-animation .bloc.bloc-collage { grid-template-columns: 1fr; padding: 8% 6%; }
+}
