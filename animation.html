@@ -1,6 +1,49 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+<style>
+.dm {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 4%;
+  align-items: center;
+  padding: 5% 6%;
+  overflow: hidden;
+}
+.dm-images {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.9;
+}
+.dm-cadre {
+  position: absolute;
+  overflow: hidden;
+  background: #f9f6f0;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+.dm-cadre img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  transform: scale(1.12);
+}
+.dm-1 { top: 0;   left: 22%; width: 56%; z-index: 3; }
+.dm-2 { top: 38%; left: 0;   width: 54%; z-index: 2; }
+.dm-3 { top: 50%; left: 54%; width: 44%; z-index: 1; }
+.dm-texte {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1vw;
+  line-height: 1.5;
+}
+.dm-texte .etiquette { margin: 0 0 0.5em; font-size: 1vw; }
+.dm-texte .citation-bloc {
+  padding-left: 1.5vw;
+  border-left: 1px solid #21152e;
+}
+.dm-texte p { margin: 0 0 1em; }
+</style>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>L'animation | Dedal des couleurs</title>
