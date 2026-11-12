@@ -814,6 +814,66 @@ img {
 
 /* ---------- Page animation uniquement ---------- */
 .page-animation .bloc {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 4%;
+  padding: 5% 4%;
+  align-items: center;
+}
+
+.page-animation .bloc-img {
+  min-width: 0;
+}
+
+.page-animation .bloc-img > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* Image zoomée pour couper les bandes noires */
+.page-animation .zoom-cadre {
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.page-animation .zoom-cadre img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transform: scale(1.15);
+}
+
+/* Collage du bloc 3 */
+.page-animation .collage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.85;
+}
+
+.page-animation .bloc-img .collage img {
+  position: absolute;
+  height: auto;
+  margin: 0;
+}
+
+.page-animation .bloc-img .collage .c1 { top: 0;   left: 12%; width: 80%; }
+.page-animation .bloc-img .collage .c2 { top: 36%; left: 0;    width: 66%; }
+.page-animation .bloc-img .collage .c3 { top: 52%; right: 0;   width: 56%; }
+
+@media (max-width: 700px) {
+  .page-animation .bloc {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 8% 6%;
+  }
+}
+
+/* ---------- Page animation uniquement ---------- */
+.page-animation .bloc {
   display: flex !important;
   flex-direction: row !important;
   align-items: center;
