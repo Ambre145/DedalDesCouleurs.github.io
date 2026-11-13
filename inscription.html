@@ -48,7 +48,10 @@
         <input id="mail" name="mail" type="email" placeholder="vous@exemple.fr" autocomplete="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" aria-describedby="erreur-mail">
         <p class="erreur" id="erreur-mail"></p>
       </div>
-     
+           <div class="champ">
+        <label for="message">Message (facultatif)</label>
+        <textarea id="message" name="message" rows="5" placeholder="Précisez la nature de votre demande"></textarea>
+      </div>
       <button type="submit" class="bouton-form">S'inscrire</button>
       <p class="confirmation" id="confirmation" role="status"></p>
     </form>
