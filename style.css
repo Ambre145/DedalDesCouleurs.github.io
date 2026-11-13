@@ -979,3 +979,44 @@ img {
   .page-animation .bloc { flex-direction: column !important; padding: 8% 6%; }
   .page-animation .bloc-img { flex: none; max-width: 100%; width: 100%; }
 }
+
+/* ---------- Lien newsletter + boutons vers le formulaire ---------- */
+a.newsletter-lien {
+  display: block;
+  color: #21152e;
+  text-decoration: none;
+}
+
+a.newsletter-lien:hover { background-color: #f6b970; }
+a.newsletter-lien:focus { outline: 3px solid #21152e; outline-offset: 3px; }
+
+.cta-inscription {
+  padding: 4% 5% 0;
+  text-align: center;
+}
+
+.cta-inscription p {
+  margin: 0 0 1em;
+  font-size: 1.4vw;
+}
+
+.bouton-cta {
+  display: inline-block;
+  margin-top: 1.2em;
+  padding: 0.6em 2em;
+  background-color: #ffe8a3;
+  border: 1px solid #8a4300;
+  border-radius: 45px;
+  color: #8a4300;
+  font-size: 1.3vw;
+  text-decoration: none;
+}
+
+.cta-inscription .bouton-cta { margin-top: 0; }
+.bouton-cta:hover { background-color: #ffd96b; }
+
+@media (max-width: 700px) {
+  a.newsletter-lien strong { font-size: 3vw; }
+  .cta-inscription p { font-size: 3.5vw; }
+  .bouton-cta { font-size: 3.5vw; }
+}
