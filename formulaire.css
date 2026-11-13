@@ -70,3 +70,16 @@
 .legal a { color: #21152e; text-decoration: underline; }
 
 .page-form .contact.sans-pastille { margin-top: 2rem; padding-top: 3rem; }
+
+.champ textarea {
+  width: 100%;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid #6b5f73;
+  border-radius: 1.2rem;
+  background: #fff;
+  color: #21152e;
+  font: inherit;
+  resize: vertical;
+}
+
+.champ textarea:focus { outline: 3px solid #21152e; outline-offset: 2px; }
