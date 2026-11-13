@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contactez la galerie Dedal des couleurs pour acquérir une œuvre, découvrir un projet ou imaginer une collaboration.">
+  <title>Nous contacter | Dedal des couleurs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Montserrat:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="formulaire.css">
+</head>
+<body class="page-form">
+
+  <nav class="menu" id="menu" hidden>
+    <button type="button" class="menu-fermer" id="fermer-menu" aria-label="Fermer le menu">✕</button>
+    <a href="index.html">Accueil</a>
+    <a href="galerie.html">La galerie</a>
+    <a href="animation.html">L'animation</a>
+  </nav>
+
+  <div class="barre">
+    <button type="button" class="hamburger" data-ouvrir-menu aria-label="Ouvrir le menu">☰</button>
+    <a href="index.html" class="barre-titre">Dedal des couleurs</a>
+  </div>
+
+  <main class="form-main">
+    <h1>Nous contacter</h1>
+    <p class="form-intro">Une œuvre vous a marqué ? Un projet, une collaboration ? Écrivez-nous.</p>
+    <p class="form-note">Tous les champs marqués d'un * sont obligatoires.</p>
+
+    <form id="contactform" novalidate>
+      <div class="champ">
+        <label for="nom">Nom *</label>
+        <input id="nom" name="nom" type="text" placeholder="Votre nom" autocomplete="family-name" required aria-describedby="erreur-nom">
+        <p class="erreur" id="erreur-nom"></p>
+      </div>
+
+      <div class="champ">
+        <label for="prenom">Prénom *</label>
+        <input id="prenom" name="prenom" type="text" placeholder="Votre prénom" autocomplete="given-name" required aria-describedby="erreur-prenom">
+        <p class="erreur" id="erreur-prenom"></p>
+      </div>
+
+      <div class="champ">
+        <label for="mail">Email *</label>
+        <input id="mail" name="mail" type="email" placeholder="vous@exemple.fr" autocomplete="email" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" aria-describedby="erreur-mail">
+        <p class="erreur" id="erreur-mail"></p>
+      </div>
+
+      <div class="champ">
+        <label for="message">Message (facultatif)</label>
+        <textarea id="message" name="message" rows="5" placeholder="Précisez la nature de votre demande"></textarea>
+      </div>
+
+      <button type="submit" class="bouton-form">Contactez-nous</button>
+      <p class="confirmation" id="confirmation" role="status"></p>
+    </form>
+
+    <p class="mention">
+      <a href="confidentialite.html">Vos informations sont utilisées pour traiter votre demande.</a>
+    </p>
+  </main>
+
+  <section class="contact sans-pastille">
+    <div class="contact-grille">
+      <h2>Prenez rendez-vous avec l'Art</h2>
+      <address>
+        <p>📞 01.45.62.34.56</p>
+        <p>✉️ dedal_des_couleurs@gmail.com</p>
+        <p>📍 10 rue de la république 75000 Paris</p>
+      </address>
+
+      <h2>Rejoignez nous et suivez l'Art</h2>
+      <div class="reseaux">
+        <img src="reseaux-sociaux.png" alt="Instagram, Facebook, YouTube">
+        <span>dedal_des_couleurs</span>
+      </div>
+    </div>
+
+    <nav class="liens-legaux" aria-label="Informations légales">
+      <a href="#">Termes</a>
+      <a href="confidentialite.html">Politique de Confidentialité</a>
+      <a href="#">Cookies</a>
+    </nav>
+  </section>
+
+  <script src="site.js"></script>
+  <script>
+    var form = document.getElementById('contactform');
+    var champs = [
+      { id: 'nom', vide: 'Veuillez renseigner votre nom.' },
+      { id: 'prenom', vide: 'Veuillez renseigner votre prénom.' },
+      { id: 'mail', vide: 'Veuillez renseigner votre adresse e-mail.',
+        invalide: 'Adresse e-mail invalide (exemple : vous@exemple.fr).' }
+    ];
+
+    function verifier(c) {
+      var input = document.getElementById(c.id);
+      var zone = document.getElementById('erreur-' + c.id);
+      var message = '';
+      if (input.value.trim() === '') {
+        message = c.vide;
+      } else if (c.invalide && !input.checkValidity()) {
+        message = c.invalide;
+      }
+      zone.textContent = message;
+      input.setAttribute('aria-invalid', message ? 'true' : 'false');
+      return message === '';
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var conf = document.getElementById('confirmation');
+      conf.textContent = '';
+      var ok = true;
+      var premier = null;
+      champs.forEach(function (c) {
+        if (!verifier(c)) {
+          ok = false;
+          if (!premier) { premier = document.getElementById(c.id); }
+        }
+      });
+      if (!ok) { premier.focus(); return; }
+      conf.textContent = 'Merci ! Votre message a bien été pris en compte.';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
