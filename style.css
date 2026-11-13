@@ -1040,3 +1040,15 @@ a.newsletter-lien:focus { outline: 3px solid #21152e; outline-offset: 3px; }
     transition: none;
   }
 }
+
+/* ---------- Icônes des intentions ---------- */
+.intention svg {
+  display: block;
+  width: 7vw;
+  height: 7vw;
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .intention svg { width: 14vw; height: 14vw; }
+}
