@@ -1020,3 +1020,23 @@ a.newsletter-lien:focus { outline: 3px solid #21152e; outline-offset: 3px; }
   .cta-inscription p { font-size: 3.5vw; }
   .bouton-cta { font-size: 3.5vw; }
 }
+
+/* ---------- Animation au survol : images de l'accueil ---------- */
+.hero-img,
+.artistes-images img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-img:hover,
+.artistes-images img:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  z-index: 10;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-img,
+  .artistes-images img {
+    transition: none;
+  }
+}
