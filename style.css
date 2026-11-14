@@ -1085,3 +1085,20 @@ a.newsletter-lien:focus { outline: 3px solid #21152e; outline-offset: 3px; }
 @media (max-width: 700px) {
   .icones-sociaux { gap: 3vw; }
 }
+
+/* ---------- Bas de page : ligne des liens légaux ---------- */
+.contact .liens-legaux {
+  grid-column: 1 / -1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8%;
+  margin-top: 3%;
+  padding-top: 1.5%;
+  border-top: 1px solid #21152e;
+  font-size: 1.15vw;
+}
+
+.contact .liens-legaux a {
+  white-space: nowrap;
+}
