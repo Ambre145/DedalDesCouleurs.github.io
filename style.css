@@ -1114,3 +1114,13 @@ a.newsletter-lien:focus { outline: 3px solid #21152e; outline-offset: 3px; }
   object-fit: cover;
   object-position: center 8%;
 }
+
+/* ---------- Bouton vers la galerie (accueil) ---------- */
+.cta-galerie {
+  margin: 0 0 3%;
+  text-align: center;
+}
+
+.cta-galerie .bouton-cta {
+  margin-top: 0;
+}
