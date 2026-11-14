@@ -1124,3 +1124,15 @@ a.newsletter-lien:focus { outline: 3px solid #21152e; outline-offset: 3px; }
 .cta-galerie .bouton-cta {
   margin-top: 0;
 }
+
+/* ---------- Apparition des textes ---------- */
+.revele {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.revele.visible {
+  opacity: 1;
+  transform: none;
+}
