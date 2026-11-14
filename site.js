@@ -25,3 +25,30 @@
     form.reset();
   });
 })();
+
+
+// Apparition des textes au défilement
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var cibles = document.querySelectorAll(
+    '.citation, .texte-presentation, .artistes-texte, .intentions h2, ' +
+    '.intention, .ateliers h2, .bloc-texte, .o-texte, .dm-texte, ' +
+    '.oeuvre-contact, .video-section h3, .form-main h1'
+  );
+
+  var observateur = new IntersectionObserver(function (entrees) {
+    entrees.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observateur.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  cibles.forEach(function (el) {
+    el.classList.add('revele');
+    observateur.observe(el);
+  });
+})();
