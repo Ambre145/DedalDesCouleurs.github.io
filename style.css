@@ -1148,3 +1148,100 @@ a.newsletter-lien:focus { outline: 3px solid #21152e; outline-offset: 3px; }
 .presentation .cta-galerie {
   margin: 3vw 0;
 }
+
+/* ================= VERSION MOBILE (à garder tout en bas) ================= */
+@media (max-width: 700px) {
+
+  html, body { overflow-x: hidden; }
+
+  /* iOS : numéro de téléphone détecté automatiquement */
+  a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
+
+  /* 5. Bannière : le bouton ne chevauche plus le sous-titre */
+  .hero .bouton-orange { top: 54%; padding: 1vw 4vw; font-size: 3.6vw; }
+
+  /* Textes de présentation un peu plus lisibles */
+  .texte-presentation { font-size: 13px; }
+
+  /* 6. Bouton « + d'infos sur la galerie » plus petit */
+  .presentation .cta-galerie { margin: 5vw 0; }
+  .cta-galerie .bouton-cta { font-size: 12.5px; padding: 0.5em 1.4em; }
+
+  /* 4. Carrousel */
+  .carrousel-zone { gap: 2%; padding: 0 2%; }
+  .carrousel { width: auto; flex: 1 1 0; min-width: 0; gap: 10px; }
+  .carrousel img { height: 44vw; width: auto; max-width: none; object-fit: contain; }
+  .carrousel > div { width: 58vw !important; height: 44vw !important; }
+  .fleche { width: 34px; height: 34px; font-size: 22px; }
+
+  /* 3. Nos artistes : le bouton n'est plus recouvert */
+  .artistes { grid-template-columns: 1fr !important; gap: 8vw; padding: 8% 6% 12%; }
+  .artistes-images { transform: none; width: 92%; margin-top: 2vw; }
+  .artistes-texte h2 { font-size: 20px; }
+  .artistes-texte p { font-size: 13px; line-height: 1.45; }
+  .bouton-infos { font-size: 13px; padding: 0.35em 1.8em; margin-bottom: 4vw; }
+
+  /* Ateliers : pas de bulles, cartes qui défilent au doigt */
+  .ateliers { padding: 6% 0 8%; }
+  .ateliers h2 { padding: 0 5%; font-size: 20px; }
+  .ateliers .points { display: none; }
+  .ateliers-liste {
+    justify-content: flex-start;
+    padding: 0 5% 12px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 5%;
+    -webkit-overflow-scrolling: touch;
+  }
+  .carte { flex: 0 0 72%; scroll-snap-align: start; }
+  .carte-ligne h3 { font-size: 15px; }
+  .carte-ligne span, .carte-texte p, .carte-texte strong { font-size: 12px; }
+
+  /* 2. Galerie et animation : texte à côté des photos, comme sur ordinateur */
+  .bloc,
+  .page-animation .bloc,
+  .page-animation .bloc.bloc-collage {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) !important;
+    gap: 4% !important;
+    align-items: center !important;
+    padding: 8% 4% !important;
+  }
+  .bloc.inverse { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr) !important; }
+  .bloc.inverse .bloc-img { order: 2 !important; }
+  .bloc-img,
+  .page-animation .bloc-img { flex: none !important; max-width: none !important; width: auto !important; min-width: 0; }
+  .bloc-img img { width: 100% !important; }
+
+  .o-bloc,
+  .o-bloc.etroit { flex-direction: row !important; flex-wrap: nowrap !important; gap: 4% !important; padding: 8% 4% !important; }
+  .o-img,
+  .o-img.grand,
+  .o-bloc.etroit .o-img { flex: 0 0 44% !important; max-width: 44% !important; width: auto !important; }
+
+  .dm { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; gap: 4% !important; padding: 8% 4% !important; }
+
+  .bloc-texte, .o-texte, .dm-texte { font-size: 12px !important; line-height: 1.4 !important; }
+  .bloc-texte .etiquette, .o-etiquette, .dm-texte .etiquette { font-size: 12px !important; }
+  .bloc-texte .citation-bloc, .o-citation, .dm-texte .citation-bloc { padding-left: 8px !important; }
+  .bloc-texte p, .o-citation p, .dm-texte p { margin: 0 0 0.7em !important; }
+
+  /* 1. Bas de page recalibré */
+  .contact { padding: 12% 6% 4%; }
+  .contact-grille { gap: 3vw; }
+  .contact-grille h2 { font-size: 15px; }
+  .contact-grille address, .reseaux { font-size: 13px; }
+  .icones-sociaux svg { width: 34px; height: 34px; }
+  .contact .liens-legaux {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw 6vw;
+    margin-top: 6vw;
+    padding-top: 4vw;
+    font-size: 12px;
+  }
+  a.newsletter-lien strong { font-size: 14px; }
+
+  /* Pages formulaire : moins de vide avant le bas de page */
+  .form-main { padding: 2rem 1.25rem 2rem; }
+  .page-form .contact.sans-pastille { margin-top: 1rem; padding-top: 2rem; }
+}
