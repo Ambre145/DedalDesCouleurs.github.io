@@ -1245,3 +1245,61 @@ a.newsletter-lien:focus { outline: 3px solid #21152e; outline-offset: 3px; }
   .form-main { padding: 2rem 1.25rem 2rem; }
   .page-form .contact.sans-pastille { margin-top: 1rem; padding-top: 2rem; }
 }
+
+/* ===== Mobile : texte sous les images + bande du haut plus grande ===== */
+@media (max-width: 700px) {
+
+  /* Texte sous les images, avec de l'air */
+  .bloc,
+  .bloc.inverse,
+  .page-animation .bloc,
+  .page-animation .bloc.bloc-collage {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 8vw !important;
+    padding: 10% 6% !important;
+  }
+
+  .bloc.inverse .bloc-img { order: 0 !important; }
+
+  .o-bloc,
+  .o-bloc.etroit {
+    flex-direction: column !important;
+    gap: 8vw !important;
+    padding: 10% 6% !important;
+  }
+
+  .o-img,
+  .o-img.grand,
+  .o-bloc.etroit .o-img {
+    flex: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .dm {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 8vw !important;
+    padding: 10% 6% !important;
+  }
+
+  .bloc-img img { width: 100% !important; }
+
+  /* Texte plus confortable, avec plus d'espace entre les paragraphes */
+  .bloc-texte, .o-texte, .dm-texte { font-size: 14px !important; line-height: 1.55 !important; }
+  .bloc-texte .etiquette, .o-etiquette, .dm-texte .etiquette { font-size: 14px !important; margin-bottom: 0.8em !important; }
+  .bloc-texte .citation-bloc, .o-citation, .dm-texte .citation-bloc { padding-left: 12px !important; }
+  .bloc-texte p, .o-citation p, .dm-texte p { margin: 0 0 1em !important; }
+
+  /* Bande « Dedal des couleurs » en haut des pages secondaires */
+  .barre {
+    padding: 4.5vw 5vw;
+    gap: 4vw;
+  }
+
+  .barre-titre { font-size: 21px; }
+  .hamburger { font-size: 28px; }
+
+  /* Le titre de la bannière animation reste sous la bande */
+  .animation-hero h1 { top: 32%; }
+}
