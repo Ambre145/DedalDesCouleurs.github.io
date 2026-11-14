@@ -31,7 +31,9 @@
 (function () {
   if (!('IntersectionObserver' in window)) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
+  var style = document.createElement('style');
+  style.textContent = '.revele{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.revele.visible{opacity:1;transform:none}';
+  document.head.appendChild(style);
   var cibles = document.querySelectorAll(
     '.citation, .texte-presentation, .artistes-texte, .intentions h2, ' +
     '.intention, .ateliers h2, .bloc-texte, .o-texte, .dm-texte, ' +
