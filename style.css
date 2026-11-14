@@ -1102,3 +1102,15 @@ a.newsletter-lien:focus { outline: 3px solid #21152e; outline-offset: 3px; }
 .contact .liens-legaux a {
   white-space: nowrap;
 }
+
+/* ---------- Carrousel : recadrage de l'image des silhouettes ---------- */
+.carrousel {
+  align-items: center;
+}
+
+.carrousel img:nth-child(2) {
+  width: 34vw;
+  height: 16vw;
+  object-fit: cover;
+  object-position: center 8%;
+}
