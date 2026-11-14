@@ -1136,3 +1136,15 @@ a.newsletter-lien:focus { outline: 3px solid #21152e; outline-offset: 3px; }
   opacity: 1;
   transform: none;
 }
+/* ---------- Bouton galerie : espaces égaux ---------- */
+.presentation .texte-presentation {
+  margin-bottom: 0;
+}
+
+.presentation .texte-presentation p:last-child {
+  margin-bottom: 0;
+}
+
+.presentation .cta-galerie {
+  margin: 3vw 0;
+}
