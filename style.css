@@ -1303,3 +1303,83 @@ a.newsletter-lien:focus { outline: 3px solid #21152e; outline-offset: 3px; }
   /* Le titre de la bannière animation reste sous la bande */
   .animation-hero h1 { top: 32%; }
 }
+/* ===== Mobile : texte sous les images, images proportionnées au texte ===== */
+@media (max-width: 700px) {
+
+  /* Pages galerie et animation : une seule colonne, image puis texte */
+  html body .bloc,
+  html body .bloc.inverse,
+  html body.page-animation .bloc,
+  html body.page-animation .bloc.bloc-collage {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 7vw !important;
+    padding: 10% 9% !important;
+    align-items: start !important;
+  }
+
+  html body .bloc.inverse .bloc-img { order: 0 !important; }
+
+  html body .o-bloc,
+  html body .o-bloc.etroit {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    gap: 7vw !important;
+    padding: 10% 9% !important;
+  }
+
+  html body .o-img,
+  html body .o-img.grand,
+  html body .o-bloc.etroit .o-img {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  html body .dm {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 7vw !important;
+    padding: 10% 9% !important;
+  }
+
+  html body .bloc-img,
+  html body.page-animation .bloc-img {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  html body .bloc-img img { width: 100% !important; }
+
+  /* Texte à la même largeur que l'image, bien aéré */
+  html body .bloc-texte,
+  html body .o-texte,
+  html body .dm-texte {
+    width: 100% !important;
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  html body .bloc-texte .etiquette,
+  html body .o-etiquette,
+  html body .dm-texte .etiquette {
+    font-size: 14px !important;
+    margin-bottom: 0.8em !important;
+  }
+
+  html body .bloc-texte .citation-bloc,
+  html body .o-citation,
+  html body .dm-texte .citation-bloc { padding-left: 12px !important; }
+
+  html body .bloc-texte p,
+  html body .o-citation p,
+  html body .dm-texte p { margin: 0 0 1em !important; }
+
+  /* Bande « Dedal des couleurs » */
+  html body .barre { padding: 4.5vw 5vw !important; gap: 4vw !important; }
+  html body .barre-titre { font-size: 21px !important; }
+  html body .hamburger { font-size: 28px !important; }
+  html body .animation-hero h1 { top: 32% !important; }
+}
