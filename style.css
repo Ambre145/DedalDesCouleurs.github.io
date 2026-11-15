@@ -1383,3 +1383,11 @@ a.newsletter-lien:focus { outline: 3px solid #21152e; outline-offset: 3px; }
   html body .hamburger { font-size: 28px !important; }
   html body .animation-hero h1 { top: 32% !important; }
 }
+
+/* ===== Mobile : bande du haut un peu plus petite ===== */
+@media (max-width: 700px) {
+  html body .barre { padding: 3vw 5vw !important; gap: 3vw !important; }
+  html body .barre-titre { font-size: 18px !important; }
+  html body .hamburger { font-size: 24px !important; }
+  html body .animation-hero h1 { top: 26% !important; }
+}
