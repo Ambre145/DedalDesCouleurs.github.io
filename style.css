@@ -1391,3 +1391,13 @@ a.newsletter-lien:focus { outline: 3px solid #21152e; outline-offset: 3px; }
   html body .hamburger { font-size: 24px !important; }
   html body .animation-hero h1 { top: 26% !important; }
 }
+/* ---------- Contraste (accessibilité) ---------- */
+.hero .bouton-orange,
+.bouton-infos {
+  color: #8a4300;
+  border-color: #8a4300;
+}
+
+.fleche { color: #8a4300; }
+
+.barre { background-color: rgba(33, 21, 46, 0.92); }
