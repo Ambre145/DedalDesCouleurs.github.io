@@ -27,7 +27,7 @@ img {
 /* ---------- Section 1 : bannière ---------- */
 .hero {
   position: relative;
-  background-image: url("images/GUIMBAULT_Noham.webp");
+  background-image:src="images/GUIMBAULT_Noham.webp" url("images/GUIMBAULT_Noham.webp");
   background-size: cover;
   background-position: center;
   aspect-ratio: 1280 / 741;
