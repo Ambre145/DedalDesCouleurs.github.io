@@ -746,7 +746,7 @@ img {
 .animation-hero {
   position: relative;
   aspect-ratio: 2 / 1;
-  background-image: url("GUIMBAULT_Noham.jpg");
+  background-image: url("images/GUIMBAULT_Noham.webp");
   background-size: cover;
   background-position: center bottom;
 }
