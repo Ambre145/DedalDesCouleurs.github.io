@@ -54,3 +54,18 @@
     observateur.observe(el);
   });
 })();
+
+
+// Vidéo : l'iframe YouTube n'est chargé qu'au clic
+(function () {
+  var bouton = document.getElementById('video-facade');
+  if (!bouton) return;
+  bouton.addEventListener('click', function () {
+    var cadre = document.createElement('iframe');
+    cadre.src = 'https://www.youtube-nocookie.com/embed/KHDWtnezy28?autoplay=1';
+    cadre.title = "Animation de Noham Guimbault";
+    cadre.allow = 'autoplay; encrypted-media';
+    cadre.allowFullscreen = true;
+    bouton.replaceWith(cadre);
+  });
+})();
