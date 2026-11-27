@@ -27,7 +27,7 @@ img {
 /* ---------- Section 1 : bannière ---------- */
 .hero {
   position: relative;
-  background-image:url("images/GUIMBAULT_Noham.webp");
+  background-image:url("../images/GUIMBAULT_Noham.webp");
   background-size: cover;
   background-position: center;
   aspect-ratio: 1280 / 741;
@@ -607,7 +607,7 @@ img {
   align-items: center;
   justify-content: center;
   aspect-ratio: 2 / 1;
-  background-image: url("images/dannie-jing-3GZlhROZIQg-unsplash.webp");
+  background-image: url("../images/dannie-jing-3GZlhROZIQg-unsplash.webp");
   background-size: cover;
   background-position: center;
 }
